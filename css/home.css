@@ -1,0 +1,49 @@
+main
+{
+    justify-content: start;
+    padding: 4rem 1rem;
+}
+
+.card
+{
+    border: 1px solid rgba(237, 233, 233, 0.2);
+    border-radius: 5%;
+    width: 100%;
+    background-color: #4894FE;
+}
+
+.unidade
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+}
+
+.ampere
+{
+    font-size: 1.5rem;
+}
+
+button
+{
+    cursor: pointer;
+}
+
+.fa-clock
+{
+    font-size: 1.8rem;
+    border-radius: 50%;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.valor
+{
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: rgb(241, 236, 230);
+}
