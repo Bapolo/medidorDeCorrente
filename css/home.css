@@ -1,7 +1,7 @@
 main
 {
     justify-content: start;
-    padding: 1rem 1rem;
+    padding: 0rem 1rem 0 1rem;
     background-color: #ddd;
 }
 
@@ -78,4 +78,38 @@ h1
 .energia
 {
     background: conic-gradient(#fb4646 32%, #69696971 0%);
+}
+
+main
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+@media (min-width: 802px)
+{
+    main
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        padding: 0 2rem;
+    }
+
+    .card
+    {
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    main
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        padding: 0 6rem;
+    }
 }

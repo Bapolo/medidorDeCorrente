@@ -22,7 +22,7 @@ main
 
 @media (min-width: 621px)
 {
-    .container
+    main
     {
         width: 80%;
         margin: 0 auto;
@@ -31,7 +31,7 @@ main
 
 @media (min-width: 865px)
 {
-    .container
+    main
     {
         width: 55%;
     }
@@ -39,8 +39,8 @@ main
 
 @media (min-width: 1300px)
 {
-    .container
+    main
     {
-        width: 35%;
+        width: 70%;
     }
 }
