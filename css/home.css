@@ -1,49 +1,81 @@
 main
 {
     justify-content: start;
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
+    background-color: #ddd;
+}
+
+h1
+{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.7rem 0.4rem;
+    font-weight: 700;
+    background-color: white;
 }
 
 .card
 {
-    border: 1px solid rgba(237, 233, 233, 0.2);
-    border-radius: 5%;
+    background-color: white;
     width: 100%;
-    background-color: #4894FE;
-}
-
-.unidade
-{
+    padding: 1.2rem 0.7rem;
+    border-radius: 8%;
+    margin-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 1);
-    padding: 0.5rem 1rem;
-    background-color: #fff;
+    box-shadow: 0 1px 25px 8px rgba(0, 0, 0, 0.1);
 }
 
-.ampere
+.icone
 {
-    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
 }
 
-button
+.fa-solid
 {
-    cursor: pointer;
-}
-
-.fa-clock
-{
-    font-size: 1.8rem;
-    border-radius: 50%;
-    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.3);
+    color: #4894FE;
+    font-size: 3rem;
 }
 
 .valor
 {
-    margin: 1rem 0;
-    font-size: 4rem;
-    font-weight: 600;
-    padding: 1rem;
-    color: rgb(241, 236, 230);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0.8rem 0;
+}
+
+.instante
+{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-circle 
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#4894FE 92%, #69696971 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.progress-value 
+{
+    position: absolute;
+    font-size: 1.5rem;
+    color: #3e3d3d;
+    font-weight: bold;
+}
+
+.fa-plug
+{
+    color:#fb4646;
+}
+
+.energia
+{
+    background: conic-gradient(#fb4646 32%, #69696971 0%);
 }
