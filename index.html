@@ -8,43 +8,72 @@
     <link rel="stylesheet" href="./css/home.css">
     <title>Home</title>
 </head>
-<body>
-    <h1>DASHBOARD</h1>
+<body>  
+    <main class="corpo">
+        <h1>DASHBOARD</h1>
+        <section class="main">
+            <div class="card cardCorente">
+                <div class="detlhesDaCorrenete">
+                    <p class="icone"><i class="fa-solid fa-bolt"></i></p>
     
-    <main class="main">
-        <div class="card cardCorente">
-            <div class="detlhesDaCorrenete">
-                <p class="icone"><i class="fa-solid fa-bolt"></i></p>
-
-                <p class="titulo">Intensidade Da Corrente</p>
-
-                <p class="valor">54.00%</p>
-
-                <p class="instante">agora</p>
-
+                    <p class="titulo">Intensidade Da Corrente</p>
+    
+                    <p class="valor">54.00%</p>
+    
+                    <p class="instante">agora</p>
+    
+                </div>
+    
+                <div class="progress-circle">
+                    <span class="progress-value">75%</span>
+                </div>
+            </div>   
+            
+            <div class="card cardEnergia">
+                <div class="detlhesDaCorrenete">
+                    <p class="icone"><i class="fa-solid fa-plug"></i></p>
+    
+                    <p class="titulo">Energia consumida</p>
+    
+                    <p class="valor">54.00%</p>
+    
+                    <p class="instante">agora</p>
+    
+                </div>
+    
+                <div class="progress-circle energia">
+                    <span class="progress-value">15%</span>
+                </div>
             </div>
-
-            <div class="progress-circle">
-                <span class="progress-value">75%</span>
-            </div>
-        </div>   
+        </section>  
         
-        <div class="card cardEnergia">
-            <div class="detlhesDaCorrenete">
-                <p class="icone"><i class="fa-solid fa-plug"></i></p>
+        <section class="tabelaDetalhes">
+            <h2 id="historico">Histórico <i class="fa-solid fa-clock"></i></h2>
 
-                <p class="titulo">Energia consumida</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Amperagem</th>
+                    </tr>
+                </thead>
 
-                <p class="valor">54.00%</p>
+                <tbody>
+                    <tr>
+                        <td>12/04/1975</td>
+                        <td>14:36</td>
+                        <td>2</td>
+                    </tr>
 
-                <p class="instante">agora</p>
-
-            </div>
-
-            <div class="progress-circle energia">
-                <span class="progress-value">15%</span>
-            </div>
-        </div>
+                    <tr>
+                        <td>11/03/1995</td>
+                        <td>14:36</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 </body>
 </html>

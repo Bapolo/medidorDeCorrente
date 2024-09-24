@@ -10,11 +10,9 @@
     font-weight: 500;
 }
 
-main
+.main
 {
     display: flex;
-    height: 100vh;
-    overflow-y: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;  
@@ -22,7 +20,7 @@ main
 
 @media (min-width: 621px)
 {
-    main
+    .main
     {
         width: 80%;
         margin: 0 auto;
@@ -31,7 +29,7 @@ main
 
 @media (min-width: 865px)
 {
-    main
+    .main
     {
         width: 55%;
     }
@@ -39,7 +37,7 @@ main
 
 @media (min-width: 1300px)
 {
-    main
+    .main
     {
         width: 70%;
     }
