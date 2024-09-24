@@ -1,0 +1,162 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    border: none;
+    color: #001109;
+    font-weight: 500;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #000;
+    background-color: aliceblue;
+    position: relative;
+}
+
+nav ul
+{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    background-color: #ddd;
+    box-shadow: 0 1px 25px 8px rgba(0, 0, 0, 0.1);
+    transition: all .2s ease-in-out;
+    z-index: 9999;
+}
+
+nav ul li
+{
+    border-bottom: 1px solid #000;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    flex: 1; 
+}
+
+nav ul li a
+{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+nav ul .fa-solid
+{
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+nav button .fa-solid:active
+{
+    transform: scale(1.2);
+    color: #001109;
+    transition: all 0.2s ease-in-out;
+}
+
+.usuario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Duas colunas */
+    grid-template-rows: 1fr 1fr;     /* Duas linhas */
+    grid-gap: 2px;                  /* Espaço entre os elementos */
+    align-items: center;             /* Alinha verticalmente o conteúdo */
+    justify-content: center;
+}
+
+.usuario img {
+    grid-column: 1 / 2;  /* A imagem ocupa a primeira coluna */
+    grid-row: 1 / 3;     /* A imagem ocupa as duas linhas */
+    object-fit: cover;   /* Ajusta a imagem ao container */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.nome {
+    grid-column: 2 / 3;  /* Nome ocupa a segunda coluna */
+    grid-row: 1 / 2;     /* Nome na primeira linha */
+    font-weight: bold;
+}
+
+.cargo {
+    grid-column: 2 / 3;  /* Cargo ocupa a segunda coluna */
+    grid-row: 2 / 3;     /* Cargo na segunda linha */
+    font-style: italic;
+}
+
+@media (min-width: 621px)
+{
+    .main
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 865px)
+{
+    .main
+    {
+        width: 55%;
+    }
+}
+
+@media (min-width: 1168px)
+{
+    nav button .fa-solid
+    {
+        display: none;
+    } 
+
+    nav ul
+    {
+        opacity: 1;
+        position: initial;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    nav ul li
+    {
+        border: none;
+        text-align: right;
+    }
+}
+
+@media (min-width: 1300px)
+{
+    .main
+    {
+        width: 70%;
+    }
+}
+
