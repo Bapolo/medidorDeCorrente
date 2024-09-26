@@ -1,6 +1,6 @@
 body
 {
-    background-color: #ddd;
+    background-color: #f6f6f6;
 }
 
 .corpo
@@ -15,6 +15,103 @@ body
     width: 100%;
     margin: 0 auto;
     padding: 1rem 0;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #000;
+    background-color: aliceblue;
+    position: relative;
+}
+
+nav ul
+{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: #ddd;
+    box-shadow: 0 1px 25px 8px rgba(0, 0, 0, 0.1);
+    transition: all .2s ease-in-out;
+    z-index: 9999;
+}
+
+.menuFechado
+{
+    display: none;
+}
+
+.menuAberto
+{
+    display: block;
+}
+
+nav ul li
+{
+    border-bottom: 1px solid #000;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+nav ul li a
+{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+nav ul .fa-solid
+{
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+nav button .fa-solid:active
+{
+    transform: scale(1.2);
+    color: #001109;
+    transition: all 0.2s ease-in-out;
+}
+
+.usuario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Duas colunas */
+    grid-template-rows: 1fr 1fr;     /* Duas linhas */
+    grid-gap: 2px;                  /* Espaço entre os elementos */
+    align-items: center;             /* Alinha verticalmente o conteúdo */
+    justify-content: center;
+}
+
+.usuario img {
+    grid-column: 1 / 2;  /* A imagem ocupa a primeira coluna */
+    grid-row: 1 / 3;     /* A imagem ocupa as duas linhas */
+    object-fit: cover;   /* Ajusta a imagem ao container */
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.nome {
+    grid-column: 2 / 3;  /* Nome ocupa a segunda coluna */
+    grid-row: 1 / 2;     /* Nome na primeira linha */
+    font-weight: bold;
+}
+
+.cargo {
+    grid-column: 2 / 3;  /* Cargo ocupa a segunda coluna */
+    grid-row: 2 / 3;     /* Cargo na segunda linha */
+    font-style: italic;
 }
 
 h1
@@ -211,5 +308,54 @@ tbody td:nth-child(3)
     {
         width: 70%;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 1168px)
+{
+    nav button .fa-solid
+    {
+        display: none;
+    } 
+
+    nav ul
+    {
+        opacity: 1;
+        position: initial;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    nav ul li
+    {
+        border: none;
+        text-align: right;
+        padding: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    nav ul li a
+    {
+        font-size: 1rem;
+        margin: 0;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s ease-in-out;
+    }
+
+    nav ul li a:hover
+    {
+        color: rgba(0, 0, 0, 0.6)
+    }
+
+    nav ul li:active 
+    {
+        transform: scale(1.08);
     }
 }

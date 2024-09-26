@@ -1,31 +1,33 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
-    const btnMenu = document.querySelector('button .fa-solid')
+    const btnMenu = document.querySelector('.toggleButton')
     const menu = document.querySelector('.menu')
+    const iconeDoBotao = document.querySelector('#icone')
 
     btnMenu.addEventListener('click', () =>
     {
         abrirOuFecharMenu()       
     })
 
-    btnMenu.addEventListener('touchEnd', () =>
+    btnMenu.addEventListener('touchend', () =>
     {
         abrirOuFecharMenu()
     })
 
     function abrirOuFecharMenu()
     {
-        if (menu.style.display == 'none')
+        if (menu.classList.contains('menuFechado'))
             {
-                menu.style.display = 'block' 
+                menu.classList.remove('menuFechado') 
+                menu.classList.add('menuAberto')
                 
                 setTimeout(() =>
                 {
                     menu.style.opacity = '1'
                 }, 10)
                             
-                btnMenu.classList.remove('fa-bars')
-                btnMenu.classList.add('fa-caret-down')         
+                iconeDoBotao.classList.remove('fa-bars')
+                iconeDoBotao.classList.add('fa-caret-down')         
             }
             else
             {
@@ -33,11 +35,12 @@ document.addEventListener("DOMContentLoaded", () =>
     
                 setTimeout(() =>
                 {
-                    menu.style.display = 'none'
+                    menu.classList.remove('menuAberto') 
+                menu.classList.add('menuFechado')
                 }, 500)
     
-                btnMenu.classList.remove('fa-caret-down')
-                btnMenu.classList.add('fa-bars')
+                iconeDoBotao.classList.remove('fa-caret-down')
+                iconeDoBotao.classList.add('fa-bars')
                   
             }
     }
